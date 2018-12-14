@@ -1,10 +1,10 @@
-#: title  : moss/xelatex
-#: author : "Willian Paixao" <willian@ufpa.br>
-#: version: "1.1.0"
+#: title  : danhatesnumbers/xelatex
+#: author : "Dan Murphy" <danhatesnumbers@gmail.com>
+#: version: "1.0.0"
 FROM debian:8
-MAINTAINER thiagoalmeidasa@gmail.com
+MAINTAINER danhatesnumbers@gmail.com
 
-LABEL version="1.1.0"
+LABEL version="1.0.0"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -17,9 +17,9 @@ RUN apt-get update && \
   lmodern \
   make \
   texlive-fonts-recommended \
+  texlive-fonts-extra \
   texlive-generic-recommended \
   texlive-lang-english \
-  texlive-lang-portuguese \
   texlive-xetex && \
   apt-get autoclean && apt-get --purge --yes autoremove && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
